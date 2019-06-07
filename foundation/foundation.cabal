@@ -187,7 +187,7 @@ library
                      Foundation.System.Entropy.Unix
   if os(linux) && !impl(ghcjs)
     exposed-modules: Foundation.System.Bindings.Linux
-  if os(osx)
+  if os(osx) || impl(ghcjs) 
     exposed-modules: Foundation.System.Bindings.Macos
 
   default-extensions: NoImplicitPrelude
